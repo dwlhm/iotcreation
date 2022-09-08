@@ -1,0 +1,16 @@
+#info-card {
+    background: linear-gradient(180deg, #194F81 0%, rgba(35, 78, 117, 0.9) 96.77%);
+}
+.cloud-1 {
+    top: -6rem;
+    right: -5rem;
+    width: 26rem;
+    height: 22rem;
+}
+
+.cloud-2 {
+    bottom: -12rem;
+    left: -4rem;
+    width: 12rem;
+    height: 21rem;
+}

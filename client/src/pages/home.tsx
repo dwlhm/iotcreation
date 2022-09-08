@@ -1,10 +1,34 @@
+import { useEffect, useState } from "react"
+import InfoCard from "../components/InfoCard"
 import Nav from "../components/Nav"
+import Antares from "../helpers/Antares"
+import "./Home.css"
 
 function Home() {
+
+    const [ airQuality, setAirQuality ] = useState("0")
+    const [ data, setData ] = useState(["-", "-", "-", "-", "-"])
+    const [ error, setError ] = useState("null")
+
+    useEffect(() => {
+        Antares().then(res => {
+            if (res.message === "error") setError(res.error)
+            setAirQuality(res.body[5])
+            setData(res.body.slice(0,5))
+        })
+    }, [data])
+
+    if (error !== "null") {
+        return(
+            <p className="flex justify-center items-center h-screen font-bold text-lg">{error}!</p>
+        )
+    }
+
     return(
-        <>
-            <Nav AirQuality="1" /> 
-        </>
+        <div id={`quality-${airQuality}`}>
+            <Nav AirQuality={airQuality} /> 
+            <InfoCard data={data} />
+        </div>
     )
 }
 
