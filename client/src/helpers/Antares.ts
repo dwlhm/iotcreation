@@ -3,7 +3,7 @@ import { AntaresData } from "../models/Antares";
 async function Antares() {
 
       
-    const data: AntaresData = await fetch("http://ec2-3-82-213-87.compute-1.amazonaws.com/data", {
+    const data: AntaresData = await fetch("http://ec2-18-206-165-248.compute-1.amazonaws.com:3001/data", {
         method: 'GET',
         redirect: 'follow'
       })
