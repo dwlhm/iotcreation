@@ -1,5 +1,5 @@
 export interface AntaresData {
     message: string,
-    body: string,
+    data: string,
     error: string
 }

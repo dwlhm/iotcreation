@@ -17,9 +17,11 @@ async function Antares() {
             }
         });
 
+        console.log(data)
+
     const result = {
         message: data.message,
-        body: data.message !== "error" ? data.body.split(":") : [],
+        body: data.message !== "error" ? data.data.split(":") : [],
         error: data.error
     }
     
