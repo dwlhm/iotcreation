@@ -60,7 +60,7 @@ function InfoCard(props: { data: string[]}) {
                         </div>
                     </div>
                 </div>
-                <div className="my-10 ml-0 sm:ml-5">
+                <div className="my-10">
                     <h2 className="text-2xl font-semibold text-white">Kecepatan Angin</h2>
                     <div className="my-3">
                         <div className="bg-white rounded-lg shadow inline-block w-full sm:w-52 p-4 mr-3">
