@@ -38,10 +38,11 @@ function InfoCard(props: { data: string[]}) {
                         </div>
                     </div>
                 </div>
+                <div >
                 <div className="my-10">
                     <h2 className="text-2xl font-semibold text-white">Suhu & Kelembaban Udara</h2>
                     <div className="my-3">
-                        <div className="bg-white rounded-lg shadow inline-block w-full sm:w-96 p-4 mr-3">
+                        <div className="bg-white rounded-lg shadow inline-block w-full sm:w-80 p-4 mr-3">
                             <div className="inline-block border-r-2 border-slate-500 pr-5">
                                 <p className="text-base font-semibold">Suhu</p>
                                 <div className="font-bold">
@@ -58,6 +59,20 @@ function InfoCard(props: { data: string[]}) {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="my-10 ml-0 sm:ml-5">
+                    <h2 className="text-2xl font-semibold text-white">Kecepatan Angin</h2>
+                    <div className="my-3">
+                        <div className="bg-white rounded-lg shadow inline-block w-full sm:w-52 p-4 mr-3">
+                            <div className="inline-block pr-5">
+                                <div className="font-bold">
+                                    <p className="text-3xl inline-block px-3 my-4">{props.data[5]}</p>
+                                    <p className="text-xs inline-block">m/s</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
             <div id="clouds" className="z-0">

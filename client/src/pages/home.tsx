@@ -7,14 +7,14 @@ import "./Home.css"
 function Home() {
 
     const [ airQuality, setAirQuality ] = useState("0")
-    const [ data, setData ] = useState(["-", "-", "-", "-", "-"])
+    const [ data, setData ] = useState(["-", "-", "-", "-", "-", "-"])
     const [ error, setError ] = useState("null")
 
     useEffect(() => {
         Antares().then(res => {
             if (res.message === "error") setError(res.error)
-            setAirQuality(res.body[5])
-            setData(res.body.slice(0,5))
+            setAirQuality(res.body[6])
+            setData(res.body.slice(0,6))
         })
     }, [data])
 
